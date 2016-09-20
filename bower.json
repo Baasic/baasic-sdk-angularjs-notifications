@@ -1,0 +1,33 @@
+{
+  "name": "baasic-angularjs-notifications",
+  "version": "0.1.15",
+  "description": "Baasic AngularJS SDK notifications module and services.",
+  "keywords": [
+    "angularjs",
+    "baasic",
+	  "notifications",
+    "backend"
+  ],
+  "license": "MIT",
+  "main": "dist/baasic-angularjs-notifications.js",
+  "ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests",
+        "src",
+        "spec",
+		"NuGet",
+		"lib",
+        "bower.json",
+        "gulpfile.js",
+        "package.json",
+        "README.md"
+    ],
+  "devDependencies": {
+  },
+  "dependencies": {
+	"baasic-angularjs-core": "baasic/baasic-sdk-angularjs-core"
+  }
+}
