@@ -39,9 +39,9 @@
                          * - `searchQuery` - A string referencing user subscription properties using the phrase search.
                          * - `userIds` - Comma separated list of user identifiers.
                          * - `channels` - Comma separated list of channels.
-                         * - `page` - A value used to set the page number, i.e. to retrieve certain media vault subset from the storage.
+                         * - `page` - A value used to set the page number, i.e. to retrieve certain user subscriptions subset from the storage.
                          * - `rpp` - A value used to limit the size of result set per page.
-                         * - `sort` - A string used to set the media vault property to sort the result collection by.
+                         * - `sort` - A string used to set the user subscription property to sort the result collection by.
                          * - `embed` - Comma separated list of resources to be contained within the current representation.
                          * @method subscriptions.users.find
                          * @example 
@@ -56,12 +56,22 @@
                          * Parses get user subscription route; this route should be expanded with the Id of user subscription resource.
                          * @method subscriptions.users.get
                          * @example
-                            baasicMediaVaultRouteService.subscriptions.users.get.expand({
+                            baasicNotificationsRouteService.subscriptions.users.get.expand({
                                 id: '<subscription-id>'
                             });
                          */
                         get: uriTemplateService.parse('notifications/subscriptions/{id}/{?embed,fields}'),
                         
+                        /**
+                         * Parses update user subscription route; this route should be expanded with the subscription id of the previously saved user subscription resource.
+                         * @method subscriptions.users.update
+                         * @example 
+                            baasicNotificationsRouteService.subscriptions.users.update.expand({
+                                id: '<subscription-id>'
+                            });               
+                        */ 
+                        update: uriTemplateService.parse('notifications/subscriptions/{id}'),
+
                         batch: {
                             /**
                              * Parses create user subscriptions batch route; this route does not expose any additional options
@@ -98,9 +108,9 @@
                          * - `searchQuery` - A string referencing user subscription properties using the phrase search.
                          * - `registrationIds` - Comma separated list of anonymous registration identifiers.
                          * - `channels` - Comma separated list of channels.
-                         * - `page` - A value used to set the page number, i.e. to retrieve certain media vault subset from the storage.
+                         * - `page` - A value used to set the page number, i.e. to retrieve certain user subscription subset from the storage.
                          * - `rpp` - A value used to limit the size of result set per page.
-                         * - `sort` - A string used to set the media vault property to sort the result collection by.
+                         * - `sort` - A string used to set the user subscription property to sort the result collection by.
                          * - `embed` - Comma separated list of resources to be contained within the current representation.
                          * @method        
                          * @example 
@@ -115,7 +125,7 @@
                          * Parses get anonymous subscription route; this route should be expanded with the Id of anonymous subscription resource.
                          * @method subscriptions.anonymous.get
                          * @example
-                            baasicMediaVaultRouteService.subscriptions.anonymous.get.expand({
+                            baasicNotificationsRouteService.subscriptions.anonymous.get.expand({
                                 id: '<subscription-id>'
                             });
                          */
@@ -159,9 +169,9 @@
                          * - `searchQuery` - A string referencing user subscription properties using the phrase search.
                          * - `userIds` - Comma separated list of user identifiers.
                          * - `providers` - Comma separated list of notification providers.
-                         * - `page` - A value used to set the page number, i.e. to retrieve certain media vault subset from the storage.
+                         * - `page` - A value used to set the page number, i.e. to retrieve certain user subscription subset from the storage.
                          * - `rpp` - A value used to limit the size of result set per page.
-                         * - `sort` - A string used to set the media vault property to sort the result collection by.
+                         * - `sort` - A string used to set the user subscription property to sort the result collection by.
                          * - `embed` - Comma separated list of resources to be contained within the current representation.
                          * @method        
                          * @example 
@@ -176,7 +186,7 @@
                          * Parses get users registrations route; this route should be expanded with the Id of users registrations resource.
                          * @method registrations.users.get
                          * @example
-                            baasicMediaVaultRouteService.registrations.users.get.expand({
+                            baasicNotificationsRouteService.registrations.users.get.expand({
                                 id: '<registration-id>'
                             });
                          */
@@ -217,9 +227,9 @@
                          * Parses find anonymous registrations route which can be expanded with additional options. Supported items are: 
                          * - `searchQuery` - A string referencing user subscription properties using the phrase search.
                          * - `providers` - Comma separated list of notification providers.
-                         * - `page` - A value used to set the page number, i.e. to retrieve certain media vault subset from the storage.
+                         * - `page` - A value used to set the page number, i.e. to retrieve certain user subscription subset from the storage.
                          * - `rpp` - A value used to limit the size of result set per page.
-                         * - `sort` - A string used to set the media vault property to sort the result collection by.
+                         * - `sort` - A string used to set the user subscription property to sort the result collection by.
                          * - `embed` - Comma separated list of resources to be contained within the current representation.
                          * @method        
                          * @example 
@@ -234,7 +244,7 @@
                          * Parses get anonymous registrations route; this route should be expanded with the Id of anonymous registrations resource.
                          * @method registrations.anonymous.get
                          * @example
-                            baasicMediaVaultRouteService.registrations.anonymous.get.expand({
+                            baasicNotificationsRouteService.registrations.anonymous.get.expand({
                                 id: '<registration-id>'
                             });
                          */
@@ -269,7 +279,7 @@
                      * Parses get notification settings route; this route should be expanded with the notification provider name.
                      * @method settings.get
                      * @example
-                        baasicMediaVaultRouteService.settings.get.expand({
+                        baasicNotificationsRouteService.settings.get.expand({
                             provider: '<provider-name>'
                         });
                      */
@@ -279,7 +289,7 @@
                      * Parses update notification settings route; this route should be expanded with the notification provider name.
                      * @method settings.update
                      * @example
-                        baasicMediaVaultRouteService.settings.update.expand({
+                        baasicNotificationsRouteService.settings.update.expand({
                             provider: '<provider-name>'
                         });
                      */
