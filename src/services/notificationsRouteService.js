@@ -45,10 +45,10 @@
                          * - `embed` - Comma separated list of resources to be contained within the current representation.
                          * @method subscriptions.users.find
                          * @example 
-                            baasicNotificationsRouteService.subscriptions.users.find.expand({
-                                searchQuery: '<search-phrase>',
-                                channels: '<channel-name>,<channel-name>'
-                            });
+baasicNotificationsRouteService.subscriptions.users.find.expand({
+    searchQuery: '<search-phrase>',
+    channels: '<channel-name>,<channel-name>'
+});
                          */ 
                         find: uriTemplateService.parse('notifications/subscriptions/{?searchQuery,userIds,channels,page,rpp,sort,embed,fields}'),
                         
@@ -56,21 +56,11 @@
                          * Parses get user subscription route; this route should be expanded with the Id of user subscription resource.
                          * @method subscriptions.users.get
                          * @example
-                            baasicNotificationsRouteService.subscriptions.users.get.expand({
-                                id: '<subscription-id>'
-                            });
+baasicNotificationsRouteService.subscriptions.users.get.expand({
+    id: '<subscription-id>'
+});
                          */
                         get: uriTemplateService.parse('notifications/subscriptions/{id}/{?embed,fields}'),
-                        
-                        /**
-                         * Parses update user subscription route; this route should be expanded with the subscription id of the previously saved user subscription resource.
-                         * @method subscriptions.users.update
-                         * @example 
-                            baasicNotificationsRouteService.subscriptions.users.update.expand({
-                                id: '<subscription-id>'
-                            });               
-                        */ 
-                        update: uriTemplateService.parse('notifications/subscriptions/{id}'),
 
                         batch: {
                             /**
@@ -81,11 +71,11 @@
                             create: uriTemplateService.parse('notifications/subscriptions/batch'),
                             
                             /**
-                             * Parses delete user subscriptions batch route; this route does not expose any additional options
-                             * @method subscriptions.users.batch.delete
-                             * @example baasicNotificationsRouteService.subscriptions.users.batch.delete.expand({});
+                             * Parses remove user subscriptions batch route; this route does not expose any additional options
+                             * @method subscriptions.users.batch.remove
+                             * @example baasicNotificationsRouteService.subscriptions.users.batch.remove.expand({});
                              */
-                            delete: uriTemplateService.parse('notifications/subscriptions/batch'),
+                            remove: uriTemplateService.parse('notifications/subscriptions/batch'),
                             
                             /**
                              * Parses update user subscriptions batch route; this route does not expose any additional options
@@ -114,10 +104,10 @@
                          * - `embed` - Comma separated list of resources to be contained within the current representation.
                          * @method        
                          * @example 
-                            baasicNotificationsRouteService.subscriptions.anonymous.find.expand({
-                                searchQuery: '<search-phrase>',
-                                channels: '<channel-name>,<channel-name>'
-                            });
+baasicNotificationsRouteService.subscriptions.anonymous.find.expand({
+    searchQuery: '<search-phrase>',
+    channels: '<channel-name>,<channel-name>'
+});
                          */ 
                         find: uriTemplateService.parse('notifications/subscriptions/anonymous/{?searchQuery,registrationIds,channels,page,rpp,sort,embed,fields}'),
 
@@ -125,9 +115,9 @@
                          * Parses get anonymous subscription route; this route should be expanded with the Id of anonymous subscription resource.
                          * @method subscriptions.anonymous.get
                          * @example
-                            baasicNotificationsRouteService.subscriptions.anonymous.get.expand({
-                                id: '<subscription-id>'
-                            });
+baasicNotificationsRouteService.subscriptions.anonymous.get.expand({
+    id: '<subscription-id>'
+});
                          */
                         get: uriTemplateService.parse('notifications/subscriptions/anonymous/{id}/{?embed,fields}'),
 
@@ -140,11 +130,11 @@
                             create: uriTemplateService.parse('notifications/subscriptions/anonymous/batch'),
                             
                             /**
-                             * Parses delete anonymous subscription batch route; this route does not expose any additional options
-                             * @method subscriptions.anonymous.batch.delete
-                             * @example baasicNotificationsRouteService.subscriptions.anonymous.batch.delete.expand({});
+                             * Parses remove anonymous subscription batch route; this route does not expose any additional options
+                             * @method subscriptions.anonymous.batch.remove
+                             * @example baasicNotificationsRouteService.subscriptions.anonymous.batch.remove.expand({});
                              */
-                            delete: uriTemplateService.parse('notifications/subscriptions/anonymous/batch'),
+                            remove: uriTemplateService.parse('notifications/subscriptions/anonymous/batch'),
 
                             /**
                              * Parses update anonymous subscription batch route; this route does not expose any additional options
@@ -175,10 +165,10 @@
                          * - `embed` - Comma separated list of resources to be contained within the current representation.
                          * @method        
                          * @example 
-                            baasicNotificationsRouteService.registrations.users.find.expand({
-                                searchQuery: '<search-phrase>',
-                                providers: '<provider-name>,<provider-name>'
-                            });
+baasicNotificationsRouteService.registrations.users.find.expand({
+    searchQuery: '<search-phrase>',
+    providers: '<provider-name>,<provider-name>'
+});
                          */ 
                         find: uriTemplateService.parse('notifications/registrations/{?searchQuery,userIds,providers,page,rpp,sort,embed,fields}'),
 
@@ -186,9 +176,9 @@
                          * Parses get users registrations route; this route should be expanded with the Id of users registrations resource.
                          * @method registrations.users.get
                          * @example
-                            baasicNotificationsRouteService.registrations.users.get.expand({
-                                id: '<registration-id>'
-                            });
+baasicNotificationsRouteService.registrations.users.get.expand({
+    id: '<registration-id>'
+});
                          */
                         get: uriTemplateService.parse('notifications/registrations/{id}/{?embed}'),
 
@@ -201,11 +191,11 @@
                             create: uriTemplateService.parse('notifications/registrations/batch'),
                             
                             /**
-                             * Parses delete users registrations batch route; this route does not expose any additional options
-                             * @method registrations.users.batch.delete
-                             * @example baasicNotificationsRouteService.registrations.users.batch.delete.expand({});
+                             * Parses remove users registrations batch route; this route does not expose any additional options
+                             * @method registrations.users.batch.remove
+                             * @example baasicNotificationsRouteService.registrations.users.batch.remove.expand({});
                              */
-                            delete: uriTemplateService.parse('notifications/registrations/batch'),
+                            remove: uriTemplateService.parse('notifications/registrations/batch'),
                             
                             /**
                              * Parses update users registrations batch route; this route does not expose any additional options
@@ -233,10 +223,10 @@
                          * - `embed` - Comma separated list of resources to be contained within the current representation.
                          * @method        
                          * @example 
-                            baasicNotificationsRouteService.registrations.anonymous.find.expand({
-                                searchQuery: '<search-phrase>',
-                                providers: '<provider-name>,<provider-name>'
-                            });
+baasicNotificationsRouteService.registrations.anonymous.find.expand({
+    searchQuery: '<search-phrase>',
+    providers: '<provider-name>,<provider-name>'
+});
                          */ 
                         find: uriTemplateService.parse('notifications/registrations/anonymous/{?searchQuery,providers,page,rpp,sort,embed,fields}'),
 
@@ -244,9 +234,9 @@
                          * Parses get anonymous registrations route; this route should be expanded with the Id of anonymous registrations resource.
                          * @method registrations.anonymous.get
                          * @example
-                            baasicNotificationsRouteService.registrations.anonymous.get.expand({
-                                id: '<registration-id>'
-                            });
+baasicNotificationsRouteService.registrations.anonymous.get.expand({
+    id: '<registration-id>'
+});
                          */
                         get: uriTemplateService.parse('notifications/registrations/anonymous/{id}/{?embed}'),
 
@@ -259,11 +249,11 @@
                             create: uriTemplateService.parse('notifications/registrations/anonymous/batch'),
 
                             /**
-                             * Parses delete anonymous registrations batch route; this route does not expose any additional options
-                             * @method registrations.anonymous.batch.delete
-                             * @example baasicNotificationsRouteService.registrations.anonymous.batch.delete.expand({});
+                             * Parses remove anonymous registrations batch route; this route does not expose any additional options
+                             * @method registrations.anonymous.batch.remove
+                             * @example baasicNotificationsRouteService.registrations.anonymous.batch.remove.expand({});
                              */
-                            delete: uriTemplateService.parse('notifications/registrations/anonymous/batch'),
+                            remove: uriTemplateService.parse('notifications/registrations/anonymous/batch'),
 
                             /**
                              * Parses update anonymous registrations batch route; this route does not expose any additional options
@@ -279,9 +269,9 @@
                      * Parses get notification settings route; this route should be expanded with the notification provider name.
                      * @method settings.get
                      * @example
-                        baasicNotificationsRouteService.settings.get.expand({
-                            provider: '<provider-name>'
-                        });
+baasicNotificationsRouteService.settings.get.expand({
+    provider: '<provider-name>'
+});
                      */
                     get: uriTemplateService.parse('notifications/settings/{provider}'),
 
@@ -289,9 +279,9 @@
                      * Parses update notification settings route; this route should be expanded with the notification provider name.
                      * @method settings.update
                      * @example
-                        baasicNotificationsRouteService.settings.update.expand({
-                            provider: '<provider-name>'
-                        });
+baasicNotificationsRouteService.settings.update.expand({
+    provider: '<provider-name>'
+});
                      */
                     update: uriTemplateService.parse('notifications/settings/{provider}') 
                 }
