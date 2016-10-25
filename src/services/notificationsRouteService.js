@@ -270,20 +270,20 @@ baasicNotificationsRouteService.registrations.anonymous.get.expand({
                      * @method settings.get
                      * @example
 baasicNotificationsRouteService.settings.get.expand({
-    provider: '<provider-name>'
+    id: '<provider-name>'
 });
                      */
-                    get: uriTemplateService.parse('notifications/settings/{provider}'),
+                    get: uriTemplateService.parse('notifications/settings/{id}'),
 
                     /**
                      * Parses update notification settings route; this route should be expanded with the notification provider name.
                      * @method settings.update
                      * @example
 baasicNotificationsRouteService.settings.update.expand({
-    provider: '<provider-name>'
+    id: '<provider-name>'
 });
                      */
-                    update: uriTemplateService.parse('notifications/settings/{provider}') 
+                    update: uriTemplateService.parse('notifications/settings/{id}') 
                 }
             };
         }]);
