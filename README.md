@@ -1,6 +1,6 @@
 # Baasic Notifications AngularJS SDK
 
-Baasic AngularJS Notifications library provides access to [Baasic REST API](https://api.baasic.com/beta) Notifications end-points.
+Baasic AngularJS Notifications library provides access to [Baasic REST API](http://dev.baasic.com/api/reference/home) Notifications end-points.
 
 ## Dependencies
 
